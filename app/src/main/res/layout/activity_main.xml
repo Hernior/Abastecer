@@ -1,16 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.hercilio.herciliofinal.MainActivity">
 
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/activity_horizontal_margin">
+
     <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="@string/main_title"
+        android:layout_centerHorizontal="true"
+        android:textSize="28sp"/>
+
+    <EditText
+        android:id="@+id/nameInput"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:inputType="textCapSentences"
+        android:hint="@string/hintGasStation"/>
+
+    <LinearLayout
+        android:id="@+id/prices"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameInput"
+        android:layout_marginTop="5dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/colorGasoline"
+            android:padding="10dp" >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/labelGasolinePrice"/>
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/gasolineInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/hintPrice"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                >
+            </EditText>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/colorEthanol"
+            android:padding="10dp" >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/labelEthanolPrice"
+                android:gravity="center_horizontal" />
+            <EditText
+                android:id="@+id/ethanolInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:hint="@string/hintPrice"
+                android:textSize="30sp"
+                android:textAlignment="center">
+            </EditText>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_below="@+id/prices"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/calculate"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/buttonCalculate"
+            android:drawableRight="@drawable/ic_send_black_24dp"
+            android:onClick="calculateCostBenefit"/>
+        <TextView
+            android:id="@+id/resultTitle"
+            android:layout_below="@+id/calculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:text="@string/defaultResultText" />
+        <TextView
+            android:id="@+id/resultValue"
+            android:layout_below="@+id/resultTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_below="@+id/resultValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/shareSocialNetwork"
+            android:layout_below="@id/resultText"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:drawableLeft="@drawable/ic_share_black_18dp"
+            android:text="@string/buttonShare"
+            android:layout_centerHorizontal="true"
+            android:onClick="onClickWhatsApp"/>
+    </RelativeLayout>
 </RelativeLayout>
+</ScrollView>

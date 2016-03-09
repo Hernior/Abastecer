@@ -1,3 +1,21 @@
 <resources>
-    <string name="app_name">"Hercilio Final "</string>
+    <string name="app_name">Abastecer</string>
+
+    <string name="main_title">Gasolina ou Etanol?</string>
+
+    <!-- Colors -->
+    <color name="colorGasoline">#FFD600</color>
+    <color name="colorEthanol">#00BFA5</color>
+
+    <!-- Form -->
+    <string name="hintGasStation">Nome do posto de combustivel</string>
+    <string name="labelGasolinePrice">Preço da Gasolina</string>
+    <string name="labelEthanolPrice">Preço do Etanol</string>
+    <string name="hintPrice">0.00</string>
+    <string name="buttonCalculate">Calcular</string>
+    <string name="buttonShare">Compartilhar</string>
+
+    <!-- Result -->
+    <string name="defaultResultText">Preencha os preços e clique em calcular</string>
+
 </resources>
