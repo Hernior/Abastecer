@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.hercilio.herciliofinal.MainActivity">
+    tools:context="com.example.hercilio.herciliofinal.MainActivity"
+    android:background="@color/colorBackground">
 
 <RelativeLayout
     android:layout_width="wrap_content"
@@ -96,8 +97,10 @@
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
             android:text="@string/buttonCalculate"
-            android:drawableRight="@drawable/ic_send_black_24dp"
-            android:onClick="calculateCostBenefit"/>
+            android:textSize="16sp"
+            android:onClick="calculateCostBenefit"
+            />
+        <!--android:drawableRight="@drawable/ic_send_black_24dp"-->
         <TextView
             android:id="@+id/resultTitle"
             android:layout_below="@+id/calculate"
@@ -130,10 +133,10 @@
             android:layout_below="@id/resultText"
             android:layout_width="170dp"
             android:layout_height="50dp"
-            android:drawableLeft="@drawable/ic_share_black_18dp"
             android:text="@string/buttonShare"
             android:layout_centerHorizontal="true"
             android:onClick="onClickWhatsApp"/>
+        <!--android:drawableLeft="@drawable/ic_share_black_18dp"-->
     </RelativeLayout>
 </RelativeLayout>
 </ScrollView>
