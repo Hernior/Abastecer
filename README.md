@@ -9,6 +9,5 @@
     * Toque no aplicativo de nome **Abastecer**;
     * Preencha os campos solicitados (*nome do posto de combustíveis, preço da gasolina e preço do etanol*) e toque em **Calcular**;
     * Verifique o resultado.
-    * 
 * ### Download
     * [Clique aqui para baixar o APK (Versão Alfa)](http://www.droidbin.com/p1adkaktbp1bi1dvgt2417ui111s3)
