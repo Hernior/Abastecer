@@ -97,10 +97,9 @@
             android:layout_height="50dp"
             android:layout_centerHorizontal="true"
             android:text="@string/buttonCalculate"
+            android:drawableRight="@drawable/ic_send_black_24dp"
             android:textSize="16sp"
-            android:onClick="calculateCostBenefit"
-            />
-        <!--android:drawableRight="@drawable/ic_send_black_24dp"-->
+            android:onClick="calculateCostBenefit" />
         <TextView
             android:id="@+id/resultTitle"
             android:layout_below="@+id/calculate"
@@ -134,9 +133,9 @@
             android:layout_width="170dp"
             android:layout_height="50dp"
             android:text="@string/buttonShare"
+            android:drawableLeft="@drawable/ic_share_black_18dp"
             android:layout_centerHorizontal="true"
             android:onClick="onClickWhatsApp"/>
-        <!--android:drawableLeft="@drawable/ic_share_black_18dp"-->
     </RelativeLayout>
 </RelativeLayout>
 </ScrollView>
