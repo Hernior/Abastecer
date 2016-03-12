@@ -4,7 +4,7 @@
 * Aplicação para tomada de decisão que visa facilitar a escolhe do usuário ao abastecer seu veículo flex, indicando a melhor escolha de combustível de acordo com o preço do estabelecimento.
 
 ### Design
-* ![Main activity](http://i.imgur.com/EmrZJjV.jpg "Main activity")
+![Main activity](http://i.imgur.com/EmrZJjV.jpg "Main activity")
 
 ### Instruções
 * Instale o aplicativo através do arquivo .APK (Você pode precisar autorizar a instalação de aplicativos de terceiros);
