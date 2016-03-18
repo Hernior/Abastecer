@@ -14,3 +14,4 @@
 
 ### Download
 * [Clique aqui para baixar o APK (Versão Alfa)](http://www.droidbin.com/p1adkaktbp1bi1dvgt2417ui111s3)
+* Desenvolvido no Android Studio 1.5.1
