@@ -1,4 +1,4 @@
-# ![Main activity](https://github.com/Hernior/android/raw/master/app/src/main/res/mipmap-mdpi/ic_launcher.png) Abastecer
+# ![Launcher](https://github.com/Hernior/android/raw/master/app/src/main/res/mipmap-mdpi/ic_launcher.png) Abastecer
 ---
 ### Ideia
 * Aplicação para tomada de decisão que visa facilitar a escolhe do usuário ao abastecer seu veículo flex, indicando a melhor escolha de combustível de acordo com o preço do estabelecimento.
