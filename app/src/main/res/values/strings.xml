@@ -12,6 +12,7 @@
     <string name="buttonShare">Compartilhar</string>
 
     <!-- Result -->
-    <string name="defaultResultText">Preencha os preços e clique em calcular</string>
+    <string name="tipMessage">Preencha os preços e clique em calcular</string>
+    <string name="resultTitle">Melhor abastecer com</string>
 
 </resources>

@@ -108,34 +108,34 @@
             android:layout_marginTop="5dp"
             android:textAlignment="center"
             android:textAllCaps="true"
-            android:text="@string/defaultResultText" />
-        <TextView
-            android:id="@+id/resultValue"
-            android:layout_below="@+id/resultTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:textAlignment="center"
-            android:textSize="50sp" />
+            android:text="@string/tipMessage" />
+        <!--<TextView-->
+            <!--android:id="@+id/resultValue"-->
+            <!--android:layout_below="@+id/resultTitle"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textSize="50sp" />-->
 
-        <TextView
-            android:id="@+id/resultText"
-            android:layout_below="@+id/resultValue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:textAlignment="center"
-            android:textSize="16sp"/>
+        <!--<TextView-->
+            <!--android:id="@+id/resultText"-->
+            <!--android:layout_below="@+id/resultValue"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textSize="16sp"/>-->
 
-        <Button
-            android:id="@+id/shareSocialNetwork"
-            android:layout_below="@id/resultText"
-            android:layout_width="170dp"
-            android:layout_height="50dp"
-            android:text="@string/buttonShare"
-            android:drawableLeft="@drawable/ic_share_black_18dp"
-            android:layout_centerHorizontal="true"
-            android:onClick="onClickWhatsApp"/>
+        <!--<Button-->
+            <!--android:id="@+id/shareSocialNetwork"-->
+            <!--android:layout_below="@id/resultText"-->
+            <!--android:layout_width="170dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:text="@string/buttonShare"-->
+            <!--android:drawableLeft="@drawable/ic_share_black_18dp"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:onClick="onClickWhatsApp"/>-->
     </RelativeLayout>
 </RelativeLayout>
 </ScrollView>

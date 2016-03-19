@@ -4,19 +4,21 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import java.text.NumberFormat;
 
 public class MainActivity extends AppCompatActivity {
-
+    public static final String RESULT_NAME = "com.example.hercilio.herciliofinal.RESULT";
+    public static final String RESULT_COLOR = "com.example.hercilio.herciliofinal.COLOR";
+    public static final String RESULT_TEXT = "com.example.hercilio.herciliofinal.TEXT";
+    public static final String SHARE_GAS_STATION = "com.example.hercilio.herciliofinal.GAS_STATION";
+    public static final String SHARE_GASOLINE_PRICE = "com.example.hercilio.herciliofinal.GASOLINE_PRICE";
+    public static final String SHARE_ETHANOL_PRICE = "com.example.hercilio.herciliofinal.ETHANOL_PRICE";
     String name;
     String tipoCombustivel;
     float gasolinePrice = 0;
@@ -26,12 +28,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button shareButton = (Button) findViewById(R.id.shareSocialNetwork);
-        shareButton.setVisibility(View.INVISIBLE);
     }
 
     public void calculateCostBenefit(View v) {
-        String resultTitle = "Melhor abastecer com";
         String resultText;
         String resultColor;
 
@@ -75,34 +74,21 @@ public class MainActivity extends AppCompatActivity {
                     resultColor = "#FFD600";
                     resultText = "O etanol só valeria a pena por um preço abaixo de "+NumberFormat.getCurrencyInstance().format(gasolinePrice*0.7);
                 }
-                displayResult(resultTitle, tipoCombustivel, resultColor, resultText);
+                displayResult(tipoCombustivel, resultColor, resultText);
             }
         }
     }
 
-    private void displayResult(String intro, String result, String color, String message) {
-        TextView resultTextViewIntro = (TextView) findViewById(R.id.resultTitle);
-        resultTextViewIntro.setText(intro);
+    private void displayResult(String result, String color, String message) {
+        Intent intent = new Intent(this, Result.class);
 
-        TextView resultTextViewValue = (TextView) findViewById(R.id.resultValue);
-        resultTextViewValue.setText(result);
-        resultTextViewValue.setTextColor(Color.parseColor(color));
+        intent.putExtra(RESULT_NAME, result);
+        intent.putExtra(RESULT_COLOR, color);
+        intent.putExtra(RESULT_TEXT, message);
 
-        TextView resultTextViewMessage= (TextView) findViewById(R.id.resultText);
-        resultTextViewMessage.setText(message);
-
-        Button shareButton = (Button) findViewById(R.id.shareSocialNetwork);
-        shareButton.setVisibility(View.VISIBLE);
-    }
-
-    public void onClickWhatsApp(View view) {
-        Intent sendIntent = new Intent();
-        sendIntent.setAction(Intent.ACTION_SEND);
-        sendIntent.putExtra(Intent.EXTRA_TEXT, "No posto: " + name + "\n" +
-                "Vale mais a pena abastecer com " + tipoCombustivel + " hoje.\n" +
-                "Gasolina: "+NumberFormat.getCurrencyInstance().format(gasolinePrice)+"\n" +
-                "Etanol: "+NumberFormat.getCurrencyInstance().format(ethanolPrice));
-        sendIntent.setType("text/plain");
-        startActivity(sendIntent);
+        intent.putExtra(SHARE_GAS_STATION, name);
+        intent.putExtra(SHARE_GASOLINE_PRICE, NumberFormat.getCurrencyInstance().format(gasolinePrice));
+        intent.putExtra(SHARE_ETHANOL_PRICE, NumberFormat.getCurrencyInstance().format(ethanolPrice));
+        startActivity(intent);
     }
 }

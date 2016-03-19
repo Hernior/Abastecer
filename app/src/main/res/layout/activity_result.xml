@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.hercilio.herciliofinal.Result"
+    android:background="@color/colorBackground">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/resultTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:text="@string/resultTitle"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/resultValue"
+            android:layout_below="@+id/resultTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:textSize="50sp" />
+
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_below="@+id/resultValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textAlignment="center"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/shareSocialNetwork"
+            android:layout_below="@id/resultText"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:text="@string/buttonShare"
+            android:drawableLeft="@drawable/ic_share_black_18dp"
+            android:layout_centerHorizontal="true"
+            android:onClick="shareResult"/>
+
+</RelativeLayout>
+</ScrollView>
