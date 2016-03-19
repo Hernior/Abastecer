@@ -13,5 +13,5 @@
 * Verifique o resultado.
 
 ### Download
-* [Clique aqui para baixar o APK (Versão Alfa)](http://www.droidbin.com/p1adkaktbp1bi1dvgt2417ui111s3)
+* [Clique aqui para baixar o APK (Versão Beta)](https://drive.google.com/file/d/0ByM0m9x-UWb7dXAtOG9Eb0JjeU0/view?usp=sharing)
 * Desenvolvido no Android Studio 1.5.1
